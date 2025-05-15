@@ -1,0 +1,110 @@
+/* Notes Container */
+.note {
+    width: 100%;
+    max-width: 1000px;  /* Larger max-width for wider notes */
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);  /* Stronger shadow for a more card-like look */
+    text-align: center;
+  }
+  
+  /* Note Title */
+  .note h1 {
+    font-size: 30px;  /* Larger title size */
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  /* Individual Note Styles */
+  .note-container {
+    background-color: #fafafa;
+    margin-bottom: 25px;  /* Increased margin for spacing between notes */
+    padding: 30px;
+    border-radius: 15px;  /* Rounded corners for card effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* Subtle shadow effect */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Hover effect for cards */
+  .note-container:hover {
+    transform: translateY(-8px);  /* Slight elevation on hover */
+  }
+  
+  /* Title for each note */
+  .note-container h2 {
+    font-size: 24px;  /* Larger title for note */
+    color: #4CAF50;  /* Green color for title */
+    margin: 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #4CAF50;  /* Underline effect */
+    width: 100%;
+  }
+  
+  /* Note content styling */
+  .note-container p {
+    font-size: 18px;  /* Bigger text size */
+    color: #555;
+    margin: 20px 0;
+    width: 100%;
+    line-height: 1.7;
+  }
+  
+  /* Button Styles */
+  button {
+    background-color: #FF6347;  /* Tomato Red for remove button */
+    color: white;
+    border: none;
+    padding: 12px 30px;  /* Larger buttons for better clickability */
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+  }
+  
+  button:hover {
+    background-color: #e55347;  /* Darker red on hover */
+  }
+  
+  button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  /* Edit Button */
+  button:nth-child(2) {
+    background-color: #4CAF50;  /* Green for edit button */
+  }
+  
+  button:nth-child(2):hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 800px) {
+    .note-container {
+      padding: 20px;  /* Smaller padding for smaller screens */
+    }
+  
+    .note-container h2 {
+      font-size: 20px;  /* Smaller title on mobile */
+    }
+  
+    .note-container p {
+      font-size: 16px;  /* Adjust content font size */
+    }
+  
+    button {
+      width: 100%;  /* Make buttons full width on small screens */
+      padding: 14px;
+    }
+  }
+  

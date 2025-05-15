@@ -1,0 +1,189 @@
+/* Wrapper for the entire page */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh; /* Ensure the container takes full height of the screen */
+    background-color: #f4f4f9;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%; /* Make sure the container occupies full width */
+  }
+  
+  /* Form styles */
+  .form {
+    width: 100%;
+    max-width: 900px;  /* Ensure form takes more space on larger screens */
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container input,
+  .form-container textarea {
+    padding: 14px; /* Increase padding for better spacing */
+    margin: 10px 0; /* Adjust margin for input fields */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%; /* Ensure inputs take full width */
+  }
+  
+  .form-container button {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Ensure button takes full width */
+    margin-top: 10px;
+  }
+  
+  .form-container button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Notes container */
+  .note {
+    width: 100%;
+    max-width: 1000px;  /* Max width of notes container */
+    margin-top: 40px;  /* Space between form and notes */
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    flex-grow: 1;
+    height: 400px;
+    box-sizing: border-box;
+    padding-right: 30px; /* Padding to the right for better spacing */
+  }
+  
+  /* Individual Note Styles */
+  .note-container {
+    background-color: #fafafa;
+    margin-bottom: 25px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Hover effect for cards */
+  .note-container:hover {
+    transform: translateY(-8px);
+  }
+  
+  /* Note title */
+  .note-container h2 {
+    font-size: 24px;
+    color: #4CAF50;
+    margin: 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #4CAF50;
+    width: 100%;
+  }
+  
+  /* Note content */
+  .note-container p {
+    font-size: 18px;
+    color: #555;
+    margin: 20px 0;
+    width: 100%;
+    line-height: 1.7;
+  }
+  
+  /* Button styles */
+  button {
+    background-color: #FF6347;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+  }
+  
+  button:hover {
+    background-color: #e55347;
+  }
+  
+  button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  /* Edit Button */
+  button:nth-child(2) {
+    background-color: #4CAF50;
+  }
+  
+  button:nth-child(2):hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 800px) {
+    .form-container input,
+    .form-container textarea {
+      font-size: 14px;
+    }
+  
+    .note-container {
+      padding: 20px;
+    }
+  
+    .note-container h2 {
+      font-size: 20px;
+    }
+  
+    .note-container p {
+      font-size: 16px;
+    }
+  
+    button {
+      width: 100%;
+      padding: 14px;
+    }
+  }
+  
+/* Search input styles */
+.search-input {
+    padding: 12px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 900px; /* Same width as form */
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .search-input:focus {
+    border-color: #4CAF50;
+  }
+  
+  /* Other styles... */
+  
