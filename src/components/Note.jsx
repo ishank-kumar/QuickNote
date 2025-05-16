@@ -1,19 +1,14 @@
-export default function Note({ note, setNote, onEdit }) {
-    function HandleClick(index) {
-      const updatedNotes = note.filter((_, i) => i !== index);
-      setNote(updatedNotes);
-    }
-  
+export default function Note({ note, onEdit, onDelete }) {
     return (
       <div className="note">
         <h1>Notes</h1>
         {note.length > 0 ? (
-          note.map((item, index) => (
-            <div className="note-container" key={index}>
+          note.map((item) => (
+            <div className="note-container" key={item.id}>
               <h2>Title: {item.title}</h2>
               <p>{item.note}</p>
-              <button onClick={() => HandleClick(index)}>Remove</button>
-              <button onClick={() => onEdit(index)}>Edit</button>
+              <button onClick={() => onDelete(item.id)}>Remove</button>
+              <button onClick={() => onEdit(item)}>Edit</button>
             </div>
           ))
         ) : (
